@@ -1,0 +1,28 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Miguel Angel",
+      "dni": "74567894L",
+      "fechaNacimiento": "21/02/1987"
+    },
+    {
+      "id": 2,
+      "nombre": "Jesica",
+      "dni": "74567564L",
+      "fechaNacimiento": "23/06/1989"
+    },
+    {
+      "id": 4,
+      "nombre": "Nayara",
+      "dni": "12345678J",
+      "fechaNacimiento": "27/10/2008"
+    },
+    {
+      "id": 6,
+      "nombre": "Jennifer",
+      "dni": "12345689S",
+      "fechaNacimiento": "27/10/2003"
+    }
+  ]
+}

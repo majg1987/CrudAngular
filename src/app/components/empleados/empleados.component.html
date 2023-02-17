@@ -1,0 +1,48 @@
+<h1>Listado de Empleados</h1>
+<div class="container-table-empleados">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>DNI</th>
+                <th>F. NACIMIENTO</th>
+                <th>OPCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empleado of empleados">
+                <td class="id-empleado"> {{empleado.id}} </td>
+                <td> {{empleado.nombre}} </td>
+                <td> {{empleado.dni}} </td>
+                <td> {{empleado.fechaNacimiento}} </td>
+                <td>
+                    <i class="fas fa-edit edit" routerLink="/edit/{{empleado.id}}"></i>
+                    <i class="fas fa-user-times delete" (click)="delete(empleado)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h2>Añadir Empleado</h2>
+<div class="container-formulario">
+    <form class="formulario">
+        <div class="campos">
+            <label for="name"> Nombre: </label>
+            <input class="campo" #empleadoNombre type="text" id="name" />
+        </div>
+        <div class="campos">
+            <label for="dni">Dni:</label>
+            <input class="campo" #empleadoDni type="text" id="dni" />
+        </div>
+        <div class="campos">
+            <label for="fechaNacimiento">F. Nacimiento:</label>
+            <input class="campo" #empleadoFechaNacimiento type="text" id="fechaNacimiento" />
+        </div>
+        <div class="botonera">
+            <button type="button" class="add-button" (click)="add(empleadoNombre.value, empleadoDni.value, empleadoFechaNacimiento.value); empleadoNombre.value=''; empleadoDni.value=''; empleadoFechaNacimiento.value='' ">
+              Añadir Empleado
+            </button>
+        </div>
+    </form>
+</div>

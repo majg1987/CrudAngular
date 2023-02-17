@@ -1,0 +1,117 @@
+    h1,
+    h2 {
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        color: #3C2A21;
+    }
+    
+    .container-table-empleados {
+        display: flex;
+        justify-content: center;
+    }
+    
+    table {
+        text-align: center;
+        background-color: #E5E5CB;
+        color: #3C2A21;
+        border-radius: .5em;
+        padding: 1em;
+    }
+    
+    .id-empleado {
+        font-weight: bolder;
+    }
+    
+    th {
+        width: 150px;
+        padding: 3px;
+    }
+    
+    td {
+        padding: 5px;
+    }
+    
+    .edit {
+        margin-right: 1em;
+        cursor: pointer;
+    }
+    
+    .delete {
+        cursor: pointer;
+    }
+    
+    .container-formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .campos {
+        display: inline-block;
+        margin-bottom: 1em;
+        color: #3C2A21;
+        font-weight: bolder;
+    }
+    
+    label {
+        margin-right: 5px;
+        font-weight: bolder;
+    }
+    
+    .campo {
+        margin-right: 15px;
+        border: none;
+        border-bottom: 1px solid #3C2A21;
+        color: #3C2A21;
+        background-color: #E5E5CB;
+        border-radius: .5em;
+        font-size: medium;
+    }
+    
+    .campo:focus {
+        outline: none;
+    }
+    
+    .botonera {
+        display: grid;
+        place-items: center;
+    }
+    
+    .add-button {
+        position: relative;
+        background-color: #3C2A21;
+        border: none;
+        border-radius: .5em;
+        color: #E5E5CB;
+        padding: 1em;
+        width: 200px;
+        text-align: center;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    
+    .add-button:after {
+        content: "";
+        background: #f1f1f1;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+    
+    .add-button:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }

@@ -1,0 +1,22 @@
+<div class="container-edit" *ngIf="empleado">
+    <h1>Editar Empleado</h1>
+    <div> <span> ID: {{empleado.id}} </span> </div>
+    <form class="formulario">
+        <div class="group-labels">
+            <label class="campo-label" for="nombre"> Nombre: </label>
+            <label class="campo-label" for="dni">Dni:</label>
+            <label class="campo-label" for="fechaNacimiento">Fecha de Nacimiento:</label>
+        </div>
+        <div class="group-inputs">
+            <input class="campo-input" name="nombre" type="text" id="nombre" [(ngModel)]="empleado.nombre" />
+            <input class="campo-input" name="dni" type="text" id="dni" [(ngModel)]="empleado.dni">
+            <input class="campo-input" name="fechaNacimiento" type="text" id="fechaNacimiento" [(ngModel)]="empleado.fechaNacimiento">
+        </div>
+    </form>
+    <div class="botonera">
+        <button type="button" class="button edit" (click)="editEmpleado()">
+              Editar Empleado
+            </button>
+        <button type="button" class="button" (click)="goBack()">Volver</button>
+    </div>
+</div>
